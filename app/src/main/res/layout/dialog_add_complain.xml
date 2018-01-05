@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Add New Complaint"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorPrimary"
+        android:layout_marginBottom="5dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:textSize="22dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/edit_text_bg">
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spinner_comp_providers_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.AppCompatSpinner>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_height="150dp"
+            android:maxLength="500"
+            android:inputType="textCapSentences|textMultiLine"
+            android:gravity="start"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+            android:background="@drawable/edittext_background_search"
+            android:hint="Complaint Description"/>
+
+        <TextView
+            android:id="@+id/tvCounterDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:maxLength="1000"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="10dp"
+            android:textSize="12dp"
+            android:textColor="@color/colorPrimary"
+            android:text="0 / max 500"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_Add_Comp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:paddingBottom="9dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="9dp"
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@color/colorButton"
+            fancy:fb_focusColor="@color/colorBackground"
+            android:onClick="Send"
+            fancy:fb_fontIconResource="&#xf1d9;"
+            fancy:fb_radius="2dp"
+            fancy:fb_text="Add Complaint"
+            fancy:fb_textColor="#FFFFFF" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

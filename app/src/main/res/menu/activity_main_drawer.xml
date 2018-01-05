@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_visiters"
+            android:icon="@drawable/ic_menu_visiters"
+            android:title="Visitors"/>
+
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/ic_message"
+            android:title="Message"/>
+
+
+        <item
+            android:id="@+id/nav_notice"
+            android:icon="@drawable/ic_menu_notice"
+            android:title="Notices"
+            app:actionLayout="@layout/counter"/>
+
+        <item
+            android:id="@+id/nav_more_rattings"
+            android:icon="@drawable/ic_business_center"
+            android:title="Service Provider"
+            app:actionLayout="@layout/next_arrow"/>
+
+
+        <item
+            android:id="@+id/nav_complaint"
+            android:icon="@drawable/ic_info_outline"
+            android:title="Complaint Register" />
+
+        <item
+            android:id="@+id/nav_vehicles"
+            android:icon="@drawable/ic_directions_car"
+            android:title="Search/Add Vehicle" />
+
+        <item
+            android:id="@+id/nav_local_stores"
+            android:icon="@drawable/ic_store"
+            android:title="Local Stores"/>
+
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings"
+            android:title="Setting" />
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_share_black_24dp"
+            android:title="Refer 'VZ Track'" />
+
+        <item
+            android:id="@+id/nav_support"
+            android:icon="@drawable/ic_headset_mic"
+            android:title="Support/Chat" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_logout"
+            android:title="Logout" />
+
+    </group>
+
+</menu>

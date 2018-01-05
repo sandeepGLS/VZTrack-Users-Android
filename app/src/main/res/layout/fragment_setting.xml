@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/fragmentBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:gravity="center"
+       android:orientation="vertical">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+         <LinearLayout
+             android:id="@+id/password"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:gravity="center"
+             android:layout_weight="1"
+             android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_action_lock_closed"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:text="Password"/>
+
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/notification"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:gravity="center"
+             android:layout_weight="1"
+             android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_action_bell"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:text="Notification"/>
+
+         </LinearLayout>
+
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:orientation="horizontal">
+
+         <LinearLayout
+             android:id="@+id/info"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:gravity="center"
+             android:layout_weight="1"
+             android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_action_user"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:text="My App Info"/>
+
+         </LinearLayout>
+
+      </LinearLayout>
+
+
+
+   </LinearLayout>
+
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:visibility="gone">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textColor="@color/colorPrimary"
+       android:layout_marginTop="5dp"
+       android:layout_marginBottom="5dp"
+       android:textSize="25dp"
+       android:textStyle="bold"
+       android:gravity="center"
+       android:text="VZ Track"/>
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+       android:orientation="vertical"
+       android:gravity="center"
+       android:background="@drawable/password_background">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="#000000"
+          android:textStyle="bold"
+          android:layout_marginBottom="2dp"
+          android:layout_marginLeft="10dp"
+          android:textSize="16dp"
+          android:text="Change Password"/>
+
+      <android.support.design.widget.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          app:passwordToggleEnabled="true"
+          android:visibility="gone"
+          android:textColorHint="@color/colorPrimaryDark">
+
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingLeft="@dimen/padding_margin"
+          android:inputType="textPassword"
+          android:textColor="@color/colorBlack"
+          android:hint="Enter Current Password"/>
+      </android.support.design.widget.TextInputLayout>
+
+
+      <android.support.design.widget.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          app:passwordToggleEnabled="true"
+          android:textColorHint="@color/colorPrimaryDark">
+
+         <EditText
+             android:id="@+id/etPasswordOld"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:paddingLeft="@dimen/padding_margin"
+             android:inputType="textPassword"
+             android:textColor="@color/colorBlack"
+             android:hint="Enter Current Password"/>
+
+      </android.support.design.widget.TextInputLayout>
+
+
+      <android.support.design.widget.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          app:passwordToggleEnabled="true"
+          android:textColorHint="@color/colorPrimaryDark">
+
+         <EditText
+             android:id="@+id/etPasswordNew1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:inputType="textPassword"
+             android:paddingLeft="@dimen/padding_margin"
+             android:textColor="@color/colorBlack"
+             android:hint="Enter New Password"/>
+
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          app:passwordToggleEnabled="true"
+          android:textColorHint="@color/colorPrimaryDark">
+
+         <EditText
+             android:id="@+id/etPasswordNew2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:inputType="textPassword"
+             android:paddingLeft="@dimen/padding_margin"
+             android:textColor="@color/colorBlack"
+             android:hint="Confirm Password"/>
+      </android.support.design.widget.TextInputLayout>
+
+
+      <Button
+          android:id="@+id/btnChangePassword"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"
+          android:textAllCaps="false"
+          android:layout_marginTop="5dp"
+          android:paddingLeft="15dp"
+          android:paddingRight="15dp"
+          android:textColor="@color/colorWhite"
+          android:background="@color/colorBackground"
+          android:text="Change Password"/>
+
+   </LinearLayout>
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+       android:orientation="vertical"
+       android:gravity="center"
+       android:background="@drawable/password_background">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="#000000"
+          android:textStyle="bold"
+          android:layout_marginBottom="7dp"
+          android:layout_marginLeft="10dp"
+          android:textSize="16dp"
+          android:text="Notification Setting"/>
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="17dp"
+             android:text="Allow Notification" />
+
+         <android.support.v7.widget.AppCompatCheckBox
+             android:id="@+id/notification_checkbox"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:checked="true"
+             android:layout_alignParentTop="true"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentEnd="true" />
+
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/rel_lay_sound"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="17dp"
+             android:text="Notification Sound"/>
+
+         <android.support.v7.widget.AppCompatCheckBox
+             android:id="@+id/notification_sount_checkbox"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:checked="true"
+             android:layout_alignParentTop="true"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentEnd="true" />
+
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/rel_lay_vibrate"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="17dp"
+             android:text="Notification Vibration"/>
+
+         <android.support.v7.widget.AppCompatCheckBox
+             android:id="@+id/notification_vibration_checkbox"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:checked="true"
+             android:layout_alignParentTop="true"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentEnd="true" />
+
+      </RelativeLayout>
+
+
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="10dp"
+          android:orientation="vertical"
+          android:gravity="center"
+          android:visibility="gone"
+          android:background="@drawable/password_background">
+
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="16dp"
+            android:text="App Version Info"/>
+
+         <TextView
+             android:id="@+id/version"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="17dp" />
+
+
+      </LinearLayout>
+
+  </LinearLayout>
+
+   </ScrollView>
+
+
+
+
+</LinearLayout>
