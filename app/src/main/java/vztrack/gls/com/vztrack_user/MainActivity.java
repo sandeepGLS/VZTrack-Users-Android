@@ -955,18 +955,17 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                     fragment_flag=0;
                 }
                 try {
-                    if (visitorsArray.getVisitors().size() == 0 && visitor_PageNo==0) {
-                        NoVisiterLayout.setVisibility(View.GONE);
-                        NoDataLayout.setVisibility(View.VISIBLE);
-                        NoDataText.setText("No Visitor To Display");
-                    }
-                    else
-                    {
-                        NoVisiterLayout.setVisibility(View.VISIBLE);
-                        NoDataLayout.setVisibility(View.GONE);
-                    }
-
                     if (visitorsArray.getCode().equals("SUCCESS")) {
+                        if (visitorsArray.getVisitors() == null || visitorsArray.getVisitors().size() == 0 && visitor_PageNo==0) {
+                            NoVisiterLayout.setVisibility(View.GONE);
+                            NoDataLayout.setVisibility(View.VISIBLE);
+                            NoDataText.setText("No Visitor To Display");
+                        }
+                        else
+                        {
+                            NoVisiterLayout.setVisibility(View.VISIBLE);
+                            NoDataLayout.setVisibility(View.GONE);
+                        }
                         showFlag=1;
                         ft = fragmentManager.beginTransaction();
                         //visitorsArray.getVisitors().clear();
@@ -1148,7 +1147,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                     {
                         new SweetAlertDialog(MainContext, SweetAlertDialog.SUCCESS_TYPE)
                                 .setTitleText(loginResponse.getMessage().split(",")[0])
-                                .setContentText(loginResponse.getMessage().split(",")[1])
+                                .setContentText("Your feedback is valuable \nfor us")
                                 .show();
                     }
                     else if(loginResponse.getCode().equalsIgnoreCase("NEED_LOGIN"))

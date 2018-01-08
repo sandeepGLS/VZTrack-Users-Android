@@ -329,13 +329,13 @@ public class Visitors_RecyclerViewAdapter extends RecyclerView.Adapter<Visitors_
             switch (menuItem.getItemId()) {
                 case R.id.action_mark_correct:
                     heading = "Mark as Correct";
-                    subHeading = visitorName+" is my visitor/guest";
+                    subHeading = visitorName+" is my \nvisitor/guest";
                     buttonText = "Yes, Mark";
                     showAlert(visitorId, heading, subHeading, buttonText);
                     return true;
                 case R.id.action_mark_incorrect:
                     heading = "Mark as Incorrect";
-                    subHeading = visitorName+" is not my visitor/guest";
+                    subHeading = visitorName+" is not my \nvisitor/guest";
                     buttonText = "Yes, Mark";
                     showAlert(visitorId, heading, subHeading, buttonText);
                     return true;
